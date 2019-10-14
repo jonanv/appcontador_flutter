@@ -7,6 +7,10 @@ void main() {
 class MyApp extends StatelessWidget {
 	@override
 	Widget build(context) {
-		return MaterialApp();
+		return MaterialApp(
+			home: Center(
+				child: Text("Hola mundo!!"),
+			)
+		);
 	}
 }
