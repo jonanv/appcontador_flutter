@@ -22,9 +22,9 @@ class HomePage extends StatelessWidget {
             ),
             floatingActionButton: FloatingActionButton(
                 onPressed: () {
-                    
+                    print('Hola mundo');
                 },
-                child: Icon(Icons.accessible),
+                child: Icon(Icons.add),
             ),
         );
     }
