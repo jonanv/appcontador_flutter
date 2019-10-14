@@ -31,8 +31,9 @@ class _ContadorPageState extends State<ContadorPage> {
             //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
             floatingActionButton: FloatingActionButton(
                 onPressed: () {
-                    print('Hola mundo');
-                    _contador++;
+                    setState(() {
+                        _contador++;
+                    });
                 },
                 child: Icon(Icons.add),
             ),
