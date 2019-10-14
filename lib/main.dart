@@ -4,5 +4,5 @@ import 'package:flutter/material.dart';
 import 'package:contadorapp_flutter/src/app.dart';
 
 void main() {
-	runApp(new MyApp());
+    runApp(new MyApp());
 }

@@ -12,6 +12,12 @@ class _ContadorPageState extends State<ContadorPage> {
     final TextStyle _textStyle = new TextStyle(fontSize: 30.0);
     int _contador = 0;
 
+    void _incrementarContador() {
+        setState(() {
+            _contador++;
+        });
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -30,11 +36,7 @@ class _ContadorPageState extends State<ContadorPage> {
             ),
             //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
             floatingActionButton: FloatingActionButton(
-                onPressed: () {
-                    setState(() {
-                        _contador++;
-                    });
-                },
+                onPressed: _incrementarContador,
                 child: Icon(Icons.add),
             ),
         );
