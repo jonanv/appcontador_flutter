@@ -5,11 +5,18 @@ class HomePage extends StatelessWidget {
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(
-                title: Text("Appbar Título"),
+                title: Text('Título'),
+                centerTitle: true,
             ),
             body: Center(
-                child: Text("Hola mundo!"),
-            ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                        Text('Número de clicks:', style: TextStyle(fontSize: 30.0)),
+                        Text('0', style: TextStyle(fontSize: 30.0))
+                    ],
+                )
+            )
         );
     }
 }
