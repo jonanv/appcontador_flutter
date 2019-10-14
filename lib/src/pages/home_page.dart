@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+
+    final TextStyle textStyle = new TextStyle(fontSize: 30.0);
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -12,11 +15,17 @@ class HomePage extends StatelessWidget {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                        Text('Número de clicks:', style: TextStyle(fontSize: 30.0)),
-                        Text('0', style: TextStyle(fontSize: 30.0))
+                        Text('Número de clicks:', style: textStyle),
+                        Text('0', style: textStyle)
                     ],
                 )
-            )
+            ),
+            floatingActionButton: FloatingActionButton(
+                onPressed: () {
+                    
+                },
+                child: Icon(Icons.accessible),
+            ),
         );
     }
 }
