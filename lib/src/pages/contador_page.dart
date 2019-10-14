@@ -18,6 +18,20 @@ class _ContadorPageState extends State<ContadorPage> {
         });
     }
 
+    Widget _crearBotones() {
+        return Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+                SizedBox(width: 30.0),
+                FloatingActionButton(onPressed: () {}, child: Icon(Icons.exposure_zero)),
+                Expanded(child: SizedBox(width: 5.0)),
+                FloatingActionButton(onPressed: () {}, child: Icon(Icons.remove)),
+                SizedBox(width: 5.0),
+                FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+            ],
+        );
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -35,10 +49,7 @@ class _ContadorPageState extends State<ContadorPage> {
                 )
             ),
             //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-            floatingActionButton: FloatingActionButton(
-                onPressed: _incrementarContador,
-                child: Icon(Icons.add),
-            ),
+            floatingActionButton: _crearBotones()
         );
     }
 }
