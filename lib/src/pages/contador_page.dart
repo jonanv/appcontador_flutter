@@ -18,6 +18,12 @@ class _ContadorPageState extends State<ContadorPage> {
         });
     }
 
+    void _decrementarContador() {
+        setState(() {
+            _contador--;
+        });
+    }
+
     Widget _crearBotones() {
         return Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -25,9 +31,9 @@ class _ContadorPageState extends State<ContadorPage> {
                 SizedBox(width: 30.0),
                 FloatingActionButton(onPressed: () {}, child: Icon(Icons.exposure_zero)),
                 Expanded(child: SizedBox(width: 5.0)),
-                FloatingActionButton(onPressed: () {}, child: Icon(Icons.remove)),
+                FloatingActionButton(onPressed: _decrementarContador, child: Icon(Icons.remove)),
                 SizedBox(width: 5.0),
-                FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+                FloatingActionButton(onPressed: _incrementarContador, child: Icon(Icons.add)),
             ],
         );
     }
