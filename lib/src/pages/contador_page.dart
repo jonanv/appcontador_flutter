@@ -13,21 +13,15 @@ class _ContadorPageState extends State<ContadorPage> {
     int _contador = 0;
 
     void _incrementarContador() {
-        setState(() {
-            _contador++;
-        });
+        setState(() => _contador++);
     }
 
     void _decrementarContador() {
-        setState(() {
-            _contador--;
-        });
-    
+        setState(() => _contador--);
     }
+
     void _resetContador() {
-        setState(() {
-            _contador = 0;
-        });
+        setState(() => _contador = 0);
     }
 
     Widget _crearBotones() {
