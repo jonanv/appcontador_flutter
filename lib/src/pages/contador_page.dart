@@ -22,6 +22,12 @@ class _ContadorPageState extends State<ContadorPage> {
         setState(() {
             _contador--;
         });
+    
+    }
+    void _resetContador() {
+        setState(() {
+            _contador = 0;
+        });
     }
 
     Widget _crearBotones() {
@@ -29,7 +35,7 @@ class _ContadorPageState extends State<ContadorPage> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
                 SizedBox(width: 30.0),
-                FloatingActionButton(onPressed: () {}, child: Icon(Icons.exposure_zero)),
+                FloatingActionButton(onPressed: _resetContador, child: Icon(Icons.exposure_zero)),
                 Expanded(child: SizedBox(width: 5.0)),
                 FloatingActionButton(onPressed: _decrementarContador, child: Icon(Icons.remove)),
                 SizedBox(width: 5.0),
